@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Enhancement</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        
+        <header class="header">
+            <h1>Image Enhancement</h1>
+            <p class="header__subtitle">Enhance your images with AI-powered super resolution and deblurring</p>
+        </header>
+
+        
+        <main class="main-content">
+            
+            <section class="upload-section">
+                <div class="card">
+                    <div class="card__body">
+                        <div class="upload-area" id="upload-area">
+                            <div class="upload-area__content">
+                                <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                    <polyline points="7,10 12,15 17,10"/>
+                                    <line x1="12" y1="15" x2="12" y2="3"/>
+                                </svg>
+                                <p class="upload-text">Drag and drop your image here</p>
+                                <p class="upload-subtext">or click to browse</p>
+                            </div>
+                        </div>
+                        <input type="file" id="file-input" accept="image/*" class="file-input">
+                    </div>
+                </div>
+            </section>
+
+           
+            <section class="enhancement-section" id="enhancement-section">
+                <div class="card">
+                    <div class="card__body">
+                        <h3>Enhancement Options</h3>
+                        <div class="enhancement-options">
+                            <button class="btn btn--outline enhancement-btn" data-type="2x">
+                                <div class="enhancement-btn__content">
+                                    <strong>2x Super Resolution</strong>
+                                    <span>Double image resolution</span>
+                                </div>
+                            </button>
+                            <button class="btn btn--outline enhancement-btn" data-type="4x">
+                                <div class="enhancement-btn__content">
+                                    <strong>4x Super Resolution</strong>
+                                    <span>Quadruple image resolution</span>
+                                </div>
+                            </button>
+                            <button class="btn btn--outline enhancement-btn" data-type="deblur">
+                                <div class="enhancement-btn__content">
+                                    <strong>Deblur</strong>
+                                    <span>Remove motion blur</span>
+                                </div>
+                            </button>
+                        </div>
+                        <button class="btn btn--primary btn--full-width" id="enhance-btn" disabled>
+                            Enhance Image
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            
+            <section class="comparison-section" id="comparison-section">
+                <div class="card">
+                    <div class="card__body">
+                        <h3>Image Comparison</h3>
+                        <div class="comparison-container">
+                            <div class="comparison-wrapper">
+                                <div class="comparison-images">
+                                    <img id="original-image" class="comparison-image" alt="Original">
+                                    <img id="enhanced-image" class="comparison-image" alt="Enhanced">
+                                </div>
+                                <div class="comparison-slider" id="comparison-slider">
+                                    <div class="slider-handle"></div>
+                                </div>
+                            </div>
+                            <div class="comparison-labels">
+                                <span class="label-original">Original</span>
+                                <span class="label-enhanced">Enhanced</span>
+                            </div>
+                        </div>
+                        <div class="comparison-actions">
+                            <button class="btn btn--primary" id="download-btn">
+                                Download Enhanced Image
+                            </button>
+                            <button class="btn btn--outline" id="reset-btn">
+                                Upload New Image
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="loading-content">
+            
+            <div class="spinner">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <p class="loading-text" id="loading-text">Loading AI libraries...</p>
+        </div>
+    </div>
+
+    
+    <canvas id="processing-canvas" style="display: none;"></canvas>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/upscaler@latest/dist/browser/umd/upscaler.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
