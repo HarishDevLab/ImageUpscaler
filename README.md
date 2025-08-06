@@ -6,8 +6,8 @@ Enhance your images instantly with AI-powered super resolution (2x, 4x) and debl
 
 - **2x Resolution** 
 - **4x Super Resolution** 
-- **Deblurring:** Remove motion blur.
-- **No Backend Required:** All processing runs in your browser.
+- **Deblurring**
+- **No Backend Required**
 
 ## 🚀 Getting Started
 
@@ -23,3 +23,4 @@ Just open the [Live Demo](https://harishdevlab.github.io/ImageUpscaler/) in your
 ---
 
 Enjoy enhancing your images with AI!
+## **YOUR IMAGE.YOUR DEVICE.YOUR CONTROL**
