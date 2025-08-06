@@ -13,7 +13,7 @@ Enhance your images instantly with AI-powered super resolution (2x, 4x) and debl
 
 ### Use the Live Page
 
-Just open the [Live Demo](https://github.io/harishdevlab/imageupscaler) in your browser and start enhancing your images!
+Just open the [Live Demo](https://harishdevlab.github.io/ImageUpscaler/) in your browser and start enhancing your images!
 
 ### Run Locally
 
